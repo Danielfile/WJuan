@@ -15,6 +15,7 @@ import ModuleSubmit from '../components/submit/ModuleSubmit';
 import SubDay from '../components/submit/SubDay';
 
 import HisPages from '../components/savestars/HisPages';
+import HisTrees from '../components/savestars/HisTrees';
 
 import AddStars from '../components/stars/AddStars';
 
@@ -56,6 +57,7 @@ export default class CRouter extends Component {
 				<Route exact path="/app/submit/SubDay" component={SubDay} />
 			
                 <Route exact path="/app/savestars/HisPages" component={HisPages} />
+                <Route exact path="/app/savestars/HisTrees" component={HisTrees} />
 				
 				<Route exact path="/app/stars/AddStars" component={AddStars} />
 

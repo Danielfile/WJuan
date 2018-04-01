@@ -18,11 +18,11 @@ class AddStars extends React.Component {
             dataIndex: 'content',
 			width: '50%'
         },{
-            title: '时间',
-            dataIndex: 'time',
+            title: '数量',
+            dataIndex: 'many',
 			width: '10%'
         },{
-            title: 'operation',
+            title: '操作',
             dataIndex: 'operation',
 			width: '10%',
             render: (text, record, index) => {
@@ -39,14 +39,14 @@ class AddStars extends React.Component {
         this.state = {
             dataSource: [{
                 key: '0',
-                name: 'Edward King 0',
-                content: 'London, Park Lane no. 0',
-				time: '32',
+                name: '学习',
+                content: '我的学习之路，大学的这些年年月月',
+				many: '42',
             }, {
                 key: '1',
-                name: 'Edward King 1',
-                content: 'London, Park Lane no. 1',
-				time: '32',
+                name: '生活',
+                content: '品一杯淡茶，诗意的栖居',
+				many: '31',
             }],
             count: 2,
             deleteIndex: -1
@@ -66,7 +66,7 @@ class AddStars extends React.Component {
             key: count,
             name: `Edward King ${count}`,
             content: `London, Park Lane no. ${count}`,
-			time: 32,
+			many: 0,
         };
         this.setState({
             dataSource: [newData, ...dataSource],
@@ -83,7 +83,7 @@ class AddStars extends React.Component {
                     <Col className="gutter-row" md={24}>
                         <div className="gutter-box">
                             <Card bordered={false}>
-                                <Button className="editable-add-btn mb-s" onClick={this.handleAdd}>Add</Button>
+                                <Button className="editable-add-btn mb-s" onClick={this.handleAdd}>添加</Button>
                                 <Table
                                     bordered
                                     dataSource={dataSource}

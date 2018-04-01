@@ -2,8 +2,7 @@
  * Created by Daniel on 2018/3/30.
  */
 import React from 'react';
-import hpface from '../../style/imgs/b1.jpg';
-import { List, Avatar, Button, Spin } from 'antd';
+import { List, Button, Spin } from 'antd';
 
 import reqwest from 'reqwest';
 
@@ -15,7 +14,6 @@ class HisPages extends React.Component {
     loadingMore: false,
     showLoadingMore: true,
     data: [],
-	hpface:hpface,
   }
   componentDidMount() {
     this.getData((res) => {
@@ -55,7 +53,7 @@ class HisPages extends React.Component {
     const loadMore = showLoadingMore ? (
       <div style={{ textAlign: 'center', marginTop: 12, height: 32, lineHeight: '32px' }}>
         {loadingMore && <Spin />}
-        {!loadingMore && <Button onClick={this.onLoadMore}>loading more</Button>}
+        {!loadingMore && <Button onClick={this.onLoadMore}>加载</Button>}
       </div>
     ) : null;
     return (
@@ -66,13 +64,12 @@ class HisPages extends React.Component {
         loadMore={loadMore}
         dataSource={data}
         renderItem={item => (
-          <List.Item actions={[<a>edit</a>, <a>more</a>]}>
+          <List.Item actions={[<a>编辑</a>, <a>更多</a>]}>
             <List.Item.Meta
-              avatar={<Avatar src={hpface} />}
-              title={<a href="http://www.heiyour.com/WJuan">{item.name.last}</a>}
-              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+              title={<a href="">书签名</a>}
+              description="收藏笔记"
             />
-            <div>content</div>
+            <div>书签内容</div>
           </List.Item>
         )}
       />

@@ -11,7 +11,7 @@ class ModuleSubmit extends React.Component {
 		value: undefined,
 	}
 	onChange = (value) => {
-		console.log(arguments);
+		//console.log(arguments);
 		this.setState({ value });
 	}
 	render() {
@@ -22,25 +22,32 @@ class ModuleSubmit extends React.Component {
 				value={this.state.value}
 				size="large"
 				dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
-				placeholder="Please select"
+				placeholder="请选择"
 				allowClear
 				treeDefaultExpandAll
 				onChange={this.onChange}
 		    >
-				<TreeNode value="parent 1" title="parent 1" key="0-1">
-					<TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
-					<TreeNode value="leaf1" title="my leaf" key="random" />
-					<TreeNode value="leaf2" title="your leaf" key="random1" />
+				<TreeNode value="color" title="color" key="0-1">
+					<TreeNode value="Presets" title="Presets" key="0-1-1">
+					<TreeNode value="red" title="red" key="random1" />
+					<TreeNode value="volcano" title="volcano" key="random2" />
+					<TreeNode value="orange" title="orange" key="random3" />
+					<TreeNode value="gold" title="gold" key="random4" />
+					<TreeNode value="lime" title="lime" key="random5" />
+					<TreeNode value="green" title="green" key="random6" />
+					<TreeNode value="cyan" title="cyan" key="random7" />
+					<TreeNode value="geekblue" title="geekblue" key="random8" />
+					<TreeNode value="purple" title="purple" key="random9" />
+					<TreeNode value="magenta" title="magenta" key="random10" />
 					</TreeNode>
-					<TreeNode value="parent 1-1" title="parent 1-1" key="random2">
-					<TreeNode value="sss" title={<b style={{ color: '#08c' }}>sss</b>} key="random3" />
+					<TreeNode value="Custom" title="Custom" key="0-2">
+					<TreeNode value="#2db7f5" title={<b style={{ color: '#08c' }}>#2db7f5</b>} key="random3" />
 					</TreeNode>
 				</TreeNode>
 		    </TreeSelect>
 		    <div>
 				<h4 style={{ marginBottom: 16 }}>Presets:</h4>
 				<div>
-					<Tag color="magenta">magenta</Tag>
 					<Tag color="red">red</Tag>
 					<Tag color="volcano">volcano</Tag>
 					<Tag color="orange">orange</Tag>
@@ -51,6 +58,7 @@ class ModuleSubmit extends React.Component {
 					<Tag color="blue">blue</Tag>
 					<Tag color="geekblue">geekblue</Tag>
 					<Tag color="purple">purple</Tag>
+					<Tag color="magenta">magenta</Tag>
 				</div>
 				<h4 style={{ margin: '16px 0' }}>Custom:</h4>
 				<div>

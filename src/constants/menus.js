@@ -20,6 +20,7 @@ export const menus = [
         key: '/app/savestars', title: '收藏', icon: 'edit',
         sub: [
             { key: '/app/savestars/HisPages', title: 'Ta的网页', icon: '', },
+            { key: '/app/savestars/HisTrees', title: 'Ta的时光轴', icon: '', },
         ],
     },
     {

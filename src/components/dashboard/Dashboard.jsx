@@ -2,11 +2,12 @@
  * Created by hao.cheng on 2017/5/3.
  */
 import React from 'react';
-import { Row, Col, Card, Timeline, Icon } from 'antd';
+import { Row, Col, Card, Icon } from 'antd';
 import BreadcrumbCustom from '../BreadcrumbCustom';
 import EchartsViews from './EchartsViews';
 import EchartsProjects from './EchartsProjects';
 import b1 from '../../style/imgs/b1.jpg';
+import b2 from '../../style/imgs/b2.jpg';
 
 
 class Dashboard extends React.Component {
@@ -37,7 +38,7 @@ class Dashboard extends React.Component {
                                     </div>
                                     <div className="clear">
                                         <div className="text-muted">云数据</div>
-                                        <h2>30122</h2>
+                                        <h2>4122</h2>
                                     </div>
                                 </div>
                             </Card>
@@ -48,10 +49,10 @@ class Dashboard extends React.Component {
                             <Card bordered={false}>
                                 <div className="clear y-center">
                                     <div className="pull-left mr-m">
-                                        <Icon type="camera" className="text-2x text-info" />
+                                        <Icon type="pay-circle-o" className="text-2x text-info" />
                                     </div>
                                     <div className="clear">
-                                        <div className="text-muted">照片</div>
+                                        <div className="text-muted">积分</div>
                                         <h2>802</h2>
                                     </div>
                                 </div>
@@ -64,8 +65,8 @@ class Dashboard extends React.Component {
                                         <Icon type="mail" className="text-2x text-success" />
                                     </div>
                                     <div className="clear">
-                                        <div className="text-muted">邮件</div>
-                                        <h2>102</h2>
+                                        <div className="text-muted">订阅</div>
+                                        <h2>10</h2>
                                     </div>
                                 </div>
                             </Card>
@@ -84,24 +85,12 @@ class Dashboard extends React.Component {
                         <div className="gutter-box">
                             <Card bordered={false}>
                                 <div className="pb-m">
-                                    <h3>任务</h3>
-                                    <small>10个已经完成，2个待完成，1个正在进行中</small>
+                                    <h3>向孔子学做人</h3>
                                 </div>
                                 <a className="card-tool"><Icon type="sync" /></a>
-                                <Timeline>
-                                    <Timeline.Item color="green">新版本迭代会</Timeline.Item>
-                                    <Timeline.Item color="green">完成网站设计初版</Timeline.Item>
-                                    <Timeline.Item color="red">
-                                        <p>联调接口</p>
-                                        <p>功能验收</p>
-                                    </Timeline.Item>
-
-                                    <Timeline.Item color="#108ee9">
-                                        <p>登录功能设计</p>
-                                        <p>权限验证</p>
-                                        <p>页面排版</p>
-                                    </Timeline.Item>
-                                </Timeline>
+                                <div>
+                                    <img src={b2} className="img-responsive" alt="test" />
+                                </div>
                             </Card>
                         </div>
                     </Col>
@@ -109,7 +98,8 @@ class Dashboard extends React.Component {
                         <div className="gutter-box">
                             <Card bordered={false}>
                                 <div className="pb-m">
-                                    <h3>消息栏</h3>
+                                    <h3>任务栏</h3>
+                                    <small>以下任务已解决，刷新领取任务？</small>
                                 </div>
                                 <a className="card-tool"><Icon type="sync" /></a>
                                 <ul className="list-group no-border">
@@ -118,8 +108,8 @@ class Dashboard extends React.Component {
                                             <img src={b1} className="img-responsive img-circle" alt="test" />
                                         </a>
                                         <div className="clear">
-                                            <a href="" className="block">鸣人</a>
-                                            <span className="text-muted">终于当上火影了！</span>
+                                            <a href="http://www.cnblogs.com/eaglezb/p/6602123.html" className="block">鸣人</a>
+                                            <span className="text-muted">如何用git命令行上传本地代码到github？</span>
                                         </div>
                                     </li>
                                     <li className="list-group-item">
@@ -127,8 +117,8 @@ class Dashboard extends React.Component {
                                             <img src={b1} className="img-responsive img-circle" alt="test" />
                                         </a>
                                         <div className="clear">
-                                            <a href="" className="block">佐助</a>
-                                            <span className="text-muted">吊车尾~~</span>
+                                            <a href="http://blog.renren.com/share/246512177/13927978645/1" className="block">佐助</a>
+                                            <span className="text-muted">C盘哪些文件可以删除？</span>
                                         </div>
                                     </li>
                                     <li className="list-group-item">
@@ -136,8 +126,8 @@ class Dashboard extends React.Component {
                                             <img src={b1} className="img-responsive img-circle" alt="test" />
                                         </a>
                                         <div className="clear">
-                                            <a href="" className="block">小樱</a>
-                                            <span className="text-muted">佐助，你好帅！</span>
+                                            <a href="https://www.jianshu.com/p/a62da41dacce" className="block">小樱</a>
+                                            <span className="text-muted">React环境搭建？</span>
                                         </div>
                                     </li>
                                     <li className="list-group-item">
@@ -145,8 +135,17 @@ class Dashboard extends React.Component {
                                             <img src={b1} className="img-responsive img-circle" alt="test" />
                                         </a>
                                         <div className="clear">
-                                            <a href="" className="block">雏田</a>
-                                            <span className="text-muted">鸣人君。。。那个。。。我。。喜欢你..</span>
+                                            <a href="http://anzhu.net/?p=3079" className="block">雏田</a>
+                                            <span className="text-muted">学习共同体？</span>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item">
+                                        <a href="" className="pull-left w-40 mr-m">
+                                            <img src={b1} className="img-responsive img-circle" alt="test" />
+                                        </a>
+                                        <div className="clear">
+                                            <a href="http://jiongks.name/blog/for-after-college/" className="block">天天</a>
+                                            <span className="text-muted">走出校园要注意什么？</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -157,7 +156,7 @@ class Dashboard extends React.Component {
                         <div className="gutter-box">
                             <Card bordered={false}>
                                 <div className="pb-m">
-                                    <h3>访问量统计</h3>
+                                    <h3>我的书签</h3>
                                     <small>最近7天用户访问量</small>
                                 </div>
                                 <a className="card-tool"><Icon type="sync" /></a>

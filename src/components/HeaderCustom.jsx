@@ -60,7 +60,7 @@ class HeaderCustom extends Component {
 
     };
     menuClick = e => {
-        console.log(e);
+        //console.log(e);
         e.key === 'logout' && this.logout();
     };
     logout = () => {
@@ -78,7 +78,7 @@ class HeaderCustom extends Component {
     render() {
         const { responsive, path } = this.props;
         return (
-            <Header style={{ background: '#fff', padding: 0, height: 65 }} className="custom-theme" >
+            <Header style={{ background: '#FFFFFF', padding: 0, height: 65 }} className="custom-theme" >
                 {
                     responsive.data.isMobile ? (
                         <Popover content={<SiderCustom path={path} popoverHide={this.popoverHide} />} trigger="click" placement="bottomLeft" visible={this.state.visible} onVisibleChange={this.handleVisibleChange}>
